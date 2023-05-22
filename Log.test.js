@@ -8,13 +8,19 @@ describe("Log class", () => {
   })
 
   it("should construct a log instance", () => {
-    const logInstance = new Log(0, 0, 0, mockDate);
+    const logInstance = new Log(0, 0, mockDate);
     expect(logInstance).toBeDefined();
   })
 
   it("should format date to dd/mm/yyyy", () => {
-    const logInstance = new Log(0, 0, 0, mockDate);
-    expect(logInstance.formatDate()).toEqual('22/05/2023');
+    const logInstance = new Log(0, 0, mockDate);
+    expect(logInstance.formatDate()).toBe('22/05/2023');
   })
+
+  it("should format number", () => {
+    const logInstance = new Log(1000, 0, mockDate);
+    expect(logInstance.credit).toEqual('1000.00');
+  })
+
 
 });
