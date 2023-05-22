@@ -23,7 +23,7 @@ class Log {
   }
 
   formatNumber(amount) {
-    return amount !== 0 ? amount.toFixed(2) : "";
+    return amount !== 0 ? parseFloat(amount.toFixed(2)) : "";
   }
 
   formatLog(balance) {

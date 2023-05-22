@@ -38,7 +38,7 @@ class BankAccount {
     this.logs.reverse().forEach( log => console.log(log));
   }
 
-
 }
+
 
 module.exports = BankAccount;
