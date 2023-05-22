@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684796277954" clover="3.2.0">
-  <project timestamp="1684796277954" name="All files">
-    <metrics statements="32" coveredstatements="26" conditionals="14" coveredconditionals="8" methods="13" coveredmethods="10" elements="59" coveredelements="44" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
+<coverage generated="1684797193483" clover="3.2.0">
+  <project timestamp="1684797193483" name="All files">
+    <metrics statements="32" coveredstatements="28" conditionals="14" coveredconditionals="8" methods="13" coveredmethods="12" elements="59" coveredelements="48" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
     <file name="BankAccount.js" path="/Users/madelanedaz/Desktop/Projects/code-quality-wk/bank-tech-test/BankAccount.js">
       <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
       <line num="1" count="1" type="stmt"/>
@@ -24,16 +24,16 @@
       <line num="44" count="1" type="stmt"/>
     </file>
     <file name="Log.js" path="/Users/madelanedaz/Desktop/Projects/code-quality-wk/bank-tech-test/Log.js">
-      <metrics statements="14" coveredstatements="8" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="3"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
+      <metrics statements="14" coveredstatements="10" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="5"/>
+      <line num="3" count="5" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
       <line num="20" count="1" type="stmt"/>
       <line num="22" count="1" type="stmt"/>
-      <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="31" count="0" type="stmt"/>
       <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>

@@ -19,7 +19,10 @@ class BankAccount {
   }
 
   withdraw(logInstance) {
-    if (logInstance.getDebit() != "" && logInstance.getDebit() <= this.balance) {
+    if (
+      logInstance.getDebit() != "" &&
+      logInstance.getDebit() <= this.balance
+    ) {
       const debit = parseFloat(logInstance.getDebit());
       this.balance -= debit;
       return this.balance.toFixed(2);
@@ -35,10 +38,8 @@ class BankAccount {
 
   printStatement() {
     console.log("date || credit || debit || balance");
-    this.logs.reverse().forEach( log => console.log(log));
+    this.logs.reverse().forEach((log) => console.log(log));
   }
-
 }
-
 
 module.exports = BankAccount;
