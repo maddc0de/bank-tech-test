@@ -18,6 +18,11 @@ class Log {
     return amount !== 0 ? amount.toFixed(2) : "";
   }
 
+  formatLog(balance) {
+    if (this.credit != "") {
+      return `${this.formatDate()} || ${this.credit} || || ${balance}`
+    }
+  }
 };
 
 module.exports = Log;

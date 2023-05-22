@@ -6,10 +6,6 @@ class BankAccount {
     this.balance = 0;
   }
 
-  addLog(logInstance) {
-
-  }
-
   deposit(logInstance) {
     if (logInstance.credit != "") {
       const credit = parseFloat(logInstance.credit);
@@ -22,9 +18,21 @@ class BankAccount {
     return this.balance;
   }
 
+  addLog(logInstance) {
+    const newLog = logInstance.formatLog(this.balance);
+    this.logs.push(newLog);
+  }
+
+  printStatement() {
+    console.log("date || credit || debit || balance");
+    this.logs.forEach( log => console.log(log));
+  }
+
+
 }
 
-// const log = new Log(0, 0);
+// const log = new Log(1000, 0);
+// console.log(log);
 // const acc = new BankAccount();
 // console.log(acc.deposit(log));
 // console.log(acc.getBalance());
