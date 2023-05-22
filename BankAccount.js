@@ -19,7 +19,7 @@ class BankAccount {
   }
 
   withdraw(logInstance) {
-    if (logInstance.getDebit() !== "" && logInstance.getDebit() <= this.balance) {
+    if (logInstance.getDebit() != "" && logInstance.getDebit() <= this.balance) {
       const debit = parseFloat(logInstance.getDebit());
       this.balance -= debit;
       return this.balance.toFixed(2);
@@ -40,11 +40,5 @@ class BankAccount {
 
 
 }
-
-// const log = new Log(0, 0);
-// const acc = new BankAccount();
-// console.log(acc.withdraw(log));
-
-
 
 module.exports = BankAccount;

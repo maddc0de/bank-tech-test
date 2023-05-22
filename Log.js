@@ -1,5 +1,5 @@
 class Log {
-  constructor(moneyIn, moneyOut, date = new Date()) {
+  constructor(moneyIn, moneyOut = 0, date = new Date()) {
     this.credit = this.formatNumber(moneyIn),
     this.debit = this.formatNumber(moneyOut),
     this.date = date
@@ -29,6 +29,8 @@ class Log {
   formatLog(balance) {
     if (this.credit != "") {
       return `${this.formatDate()} || ${this.credit} || || ${balance}`
+    }  else if (this.debit != "") {
+      return `${this.formatDate()} || || ${this.debit} || ${balance}`
     }
   }
 };
