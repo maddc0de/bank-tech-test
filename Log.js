@@ -5,6 +5,14 @@ class Log {
     this.date = date
   }
 
+  getCredit() {
+    return this.credit;
+  }
+
+  getDebit() {
+    return this.debit;
+  }
+
   formatDate() {
     const formattedDate = this.date.toISOString().slice(0,10);
     const day = formattedDate.slice(8,10);

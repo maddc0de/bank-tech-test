@@ -6,16 +6,26 @@ class BankAccount {
     this.balance = 0;
   }
 
+  getBalance() {
+    return this.balance;
+  }
+
   deposit(logInstance) {
-    if (logInstance.credit != "") {
-      const credit = parseFloat(logInstance.credit);
+    if (logInstance.getCredit() != "") {
+      const credit = parseFloat(logInstance.getCredit());
       this.balance += credit;
       return this.balance.toFixed(2);
     }
   }
 
-  getBalance() {
-    return this.balance;
+  withdraw(logInstance) {
+    if (logInstance.getDebit() !== "" && logInstance.getDebit() <= this.balance) {
+      const debit = parseFloat(logInstance.getDebit());
+      this.balance -= debit;
+      return this.balance.toFixed(2);
+    } else {
+      console.log("Insufficient funds");
+    }
   }
 
   addLog(logInstance) {
@@ -31,11 +41,10 @@ class BankAccount {
 
 }
 
-// const log = new Log(1000, 0);
-// console.log(log);
+// const log = new Log(0, 0);
 // const acc = new BankAccount();
-// console.log(acc.deposit(log));
-// console.log(acc.getBalance());
+// console.log(acc.withdraw(log));
+
 
 
 module.exports = BankAccount;
