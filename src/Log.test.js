@@ -44,6 +44,11 @@ describe("Log class", () => {
       const logInstance = new Log(0, 100, mockDate);
       expect(logInstance.getDebit()).toEqual("100.00");
     });
+
+    it("should format debit with empty string when it is zero", () => {
+      const logInstance = new Log(0, 0, mockDate);
+      expect(logInstance.getDebit()).toEqual("");
+    });
   });
 
   describe("formatLog method", () => {

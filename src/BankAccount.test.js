@@ -8,41 +8,41 @@ describe("BankAccount class", () => {
 
   describe("deposit method", () => {
     it("does not change balance amount when credit is empty", () => {
-      const logDouble = {
+      const mockLog = {
         getCredit: () => "",
       };
 
-      account.deposit(logDouble);
+      account.deposit(mockLog);
       expect(account.getBalance()).toEqual(0);
     });
 
     it("changes balance amount to 1000.00 when credit is 1000.00", () => {
-      const logDouble = {
+      const mockLog = {
         getCredit: () => 1000.0,
       };
 
-      account.deposit(logDouble);
+      account.deposit(mockLog);
       expect(account.getBalance()).toEqual(1000.0);
     });
   });
 
   describe("withdraw method", () => {
     it("prints an error message when trying to debit more than current balance", () => {
-      const logDouble = {
+      const mockLog = {
         getDebit: () => 500.0,
       };
 
       const consoleLogMock = jest.fn();
       console.log = consoleLogMock;
 
-      account.withdraw(logDouble);
+      account.withdraw(mockLog);
       expect(consoleLogMock).toHaveBeenCalledWith("Insufficient funds");
     });
   });
 
   describe("printStatement method", () => {
     it("prints logs of deposit and withdrawal with balance from latest to oldest", () => {
-      const logDouble = {
+      const mockLog = {
         getCredit: () => 1000.0,
         date: "2023-01-10T15:34:45.558Z",
         formatLog: () => "10/01/2023 || 1000.00 || || 1000.00",
@@ -60,8 +60,8 @@ describe("BankAccount class", () => {
         formatLog: () => "14/01/2023 || || 500.00 || 2500.00",
       };
 
-      account.deposit(logDouble);
-      account.addLog(logDouble);
+      account.deposit(mockLog);
+      account.addLog(mockLog);
 
       account.deposit(logDouble2);
       account.addLog(logDouble2);
