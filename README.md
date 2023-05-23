@@ -10,6 +10,8 @@ This program provides a simple Bank Account system using JavaScript classes. It 
 
 A `BankAccount` will then have many instances of the `Log` Class.
 
+![Using node to interact with the program](using-app-in-node.png)
+
 ## Objective
 
 This is a practice tech test with Makers. To practice my Object-Oriented design and Test-Driven Development skills.
