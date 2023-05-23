@@ -29,4 +29,4 @@ date || credit || debit || balance
 
 ## Initial Planning
 
-[classes design](classes-plan.png)
+![classes design](classes-plan.png)
